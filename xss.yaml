@@ -2,16 +2,12 @@ swagger: '2.0'
 info:
   title: Alert Test
   version: 1.0.0
-paths:
-  /users:
-    get:
-      parameters:
-        - name: token
-          in: query
-          description: |
-            <img src=1 onerror="alert('XSS from parameter description! ' + document.cookie)">
-          required: false
-          type: string
-      responses:
-        '200':
-          description: OK
+definitions:
+  User:
+    type: object
+    properties:
+      name:
+        type: string
+        description: |
+          </textarea>
+          <button onclick="alert('XSS from schema description!\n' + document.cookie)">Click Me</button>
