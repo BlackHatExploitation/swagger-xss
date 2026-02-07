@@ -1,0 +1,1 @@
+{"id":"69873fbed0ea881f40a7ec60","record":{"swagger":"2.0","info":{"title":"XSS Test","version":"1.0"},"paths":{"/xss":{"get":{"summary":"XSS Test","description":"<script>alert(document.cookie)</script>","responses":{"200":{"description":"Success"}}}}}},"metadata":{"name":"swagger.json","readCountRemaining":95,"timeToExpire":7120,"createdAt":"2026-02-07T13:35:58.080Z"}}
