@@ -11,5 +11,5 @@ info:
         alert("XSS executed!\nDomain: " + document.domain + "\nCookie: " + document.cookie);
       }
     </script>
-  version: 1.0.0
+  version: 1.0.1
 paths: {}
